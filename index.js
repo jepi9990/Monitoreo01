@@ -20,7 +20,7 @@ app.get('/ver', (req, res) => {
       timestampsInSnapshots: true
     });
     var wholeData = []
-	db.collection('Valores').orderBy('fecha', 'asc').get()
+	db.collection('Registro').orderBy('fecha', 'asc').get()
     .then(snapshot => {
       snapshot.forEach(doc => {
       
@@ -39,17 +39,16 @@ app.post('/insertar', (req, res)=>{
 	db.settings({
       timestampsInSnapshots: true
     });
-    db.collection('Valores').add({
-      icalor: req.body.icalor,
-      iruido: req.body.iruido,
-      igas: req.body.igas,
-      fecha: new Date()
-    });
-    res.send({
-      icalor: req.body.icalor,
-      iruido: req.body.iruido,
-      igas: req.body.igas,
+    db.collection('Registro').add({ //modificar esto a valores que utilizamos
+      dia: req.body.dia,
       fecha: new Date(),
+      iden: req.body.iden
+
+    });
+    res.send({ //modificar esto a valores que utilizamos
+      dia: req.body.dia,
+      fecha: new Date(),
+      iden: req.body.iden,
       status: 'Valores insertados!'
   })
 })

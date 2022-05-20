@@ -2,14 +2,14 @@ var firebase = require('firebase')
 // change lines below with your own Firebase snippets!
 var config = {
 
-  apiKey: "AIzaSyBeZZte8NoLdzj5eYd26QnICidQoP85B8c",
-  authDomain: "region676-e21b8.firebaseapp.com",
-  databaseURL: "https://region676-e21b8.firebaseio.com",
-  projectId: "region676-e21b8",
-  storageBucket: "region676-e21b8.appspot.com",
-  messagingSenderId: "764985918459",
-  appId: "1:764985918459:web:4c38f754eda41b3476c15e",
-  measurementId: "G-W1QHXKKH5R"
+  apiKey: "AIzaSyDG6O214IEnUZ605Vf6nqO_obDbIFCNYgM",
+  authDomain: "sensor-pir-4c535.firebaseapp.com",
+  databaseURL: "https://sensor-pir-4c535-default-rtdb.firebaseio.com",
+  projectId: "sensor-pir-4c535",
+  storageBucket: "sensor-pir-4c535.appspot.com",
+  messagingSenderId: "883620808645",
+  appId: "1:883620808645:web:2093157d427b1536ec2dac",
+  measurementId: "G-G7YYS28VJF"
 };
 const fire = firebase.initializeApp(config);
 module.exports = fire;
