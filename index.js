@@ -42,13 +42,15 @@ app.post('/insertar', (req, res)=>{
     db.collection('Registro').add({ //modificar esto a valores que utilizamos
       dia: req.body.dia,
       fecha: new Date(),
-      iden: req.body.iden
+      iden: req.body.iden,
+      temp: req.body.iden
 
     });
     res.send({ //modificar esto a valores que utilizamos
       dia: req.body.dia,
       fecha: new Date(),
       iden: req.body.iden,
+      temp: req.body.iden,
       status: 'Valores insertados!'
   })
 })
